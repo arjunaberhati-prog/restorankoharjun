@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwetiau Pontianak Arjun 2026 — Resep Asli Sang Naga</title>
+<meta name="description" content="Kwetiau Pontianak Arjun. Resep otentik turun-temurun dari Pontianak, dimasak di atas api naga dengan wok besi tempa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Serif+TC:wght@300;500;700;900&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #0a0d0a;
+  --void-deep: #050705;
+  --jade: #0f3a2e;
+  --jade-light: #1a5d47;
+  --jade-glow: #2d9b7a;
+  --gold: #d4a437;
+  --gold-bright: #f2c75c;
+  --gold-deep: #8b6914;
+  --crimson: #8b1e1e;
+  --crimson-glow: #c4342e;
+  --bone: #f5ead4;
+  --ink: #1a1612;
+  --display: 'Cinzel', serif;
+  --body: 'Cormorant Garamond', serif;
+  --han: 'Noto Serif TC', serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--void);
+  color: var(--bone);
+  font-family: var(--body);
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  font-size: 17px;
+}
+
+/* Smoke/ember overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(212, 164, 55, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(196, 52, 46, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Film grain */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ============ NAV ============ */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: rgba(10, 13, 10, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212, 164, 55, 0.15);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--gold);
+  background: var(--void-deep);
+  transform: rotate(45deg);
+}
+
+.brand-mark span {
+  transform: rotate(-45deg);
+  font-family: var(--han);
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-text .name {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  color: var(--bone);
+}
+
+.brand-text .est {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.nav-links a {
+  color: var(--bone);
+  text-decoration: none;
+  transition: color 0.4s;
+  opacity: 0.7;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.nav-cta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--void);
+  background: var(--gold);
+  padding: 0.85rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-cta:hover {
+  background: var(--gold-bright);
+  box-shadow: 0 0 30px rgba(212, 164, 55, 0.4);
+}
+
+/* ============ HERO ============ */
+.hero {
+  min-height: 100vh;
+  padding: 6rem 3rem 4rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  background: 
+    radial-gradient(ellipse at center, var(--jade) 0%, var(--void-deep) 70%);
+}
+
+/* Dragon SVG background */
+.hero-dragon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.18;
+}
+
+.hero-dragon svg {
+  width: 90%;
+  max-width: 1200px;
+  height: auto;
+  filter: drop-shadow(0 0 60px rgba(45, 155, 122, 0.4));
+}
+
+/* Han chars background */
+.hero::before {
+  content: '龍';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--han);
+  font-size: 50rem;
+  color: var(--gold);
+  opacity: 0.025;
+  font-weight: 900;
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  max-width: 900px;
+  animation: heroFade 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-han {
+  font-family: var(--han);
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 30px rgba(212, 164, 55, 0.3);
+}
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+  color: var(--bone);
+  text-transform: uppercase;
+}
+
+h1 em {
+  font-family: var(--body);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold);
+  text-transform: lowercase;
+  letter-spacing: 0;
+  display: block;
+  font-size: 0.55em;
+  margin-top: 0.3em;
+}
+
+.hero-sub {
+  font-family: var(--body);
+  font-size: 1.35rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(245, 234, 212, 0.75);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--crimson);
+  color: var(--bone);
+  padding: 1.2rem 2.5rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  text-decoration: none;
+  border: 1px solid var(--crimson-glow);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--crimson-glow), var(--crimson));
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 0;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 40px rgba(196, 52, 46, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-ghost {
+  color: var(--gold);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding: 1.2rem 2rem;
+  border: 1px solid rgba(212, 164, 55, 0.3);
+  transition: all 0.4s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  background: rgba(212, 164, 55, 0.05);
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  z-index: 5;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+@keyframes heroFade {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============ LEGEND BAR ============ */
+.legend-bar {
+  background: var(--void-deep);
+  border-top: 1px solid rgba(212, 164, 55, 0.2);
+  border-bottom: 1px solid rgba(212, 164, 55, 0.2);
+  padding: 1.8rem 0;
+  overflow: hidden;
+}
+
+.legend-track {
+  display: flex;
+  gap: 5rem;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.legend-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.legend-track span::after {
+  content: '✦';
+  color: var(--crimson-glow);
+  font-size: 1rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ============ LEGEND SECTION ============ */
+.legend-section {
+  padding: 10rem 3rem;
+  background: var(--void);
+  position: relative;
+  overflow: hidden;
+}
+
+.legend-section::before {
+  content: '傳';
+  position: absolute;
+  top: 50%;
+  right: -5rem;
+  transform: translateY(-50%);
+  font-family: var(--han);
+  font-size: 40rem;
+  color: var(--jade);
+  opacity: 0.08;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.legend-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-label::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+h2 {
+  font-family: var(--display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+  color: var(--bone);
+  text-transform: uppercase;
+}
+
+h2 em {
+  font-family: var(--body);
+  font-style: italic;
+  color: var(--gold);
+  text-transform: lowercase;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.legend-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(245, 234, 212, 0.7);
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.legend-text p .drop {
+  font-family: var(--display);
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
+  margin-right: 0.8rem;
+  margin-top: 0.3rem;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.legend-quote {
+  font-family: var(--body);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin: 3rem 0 1rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--crimson);
+  line-height: 1.4;
+}
+
+.legend-quote-attr {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: rgba(245, 234, 212, 0.4);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-left: 2rem;
+}
+
+.legend-visual {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+}
+
+.legend-visual::before {
+  content: '';
+  position: absolute;
+  inset: 5%;
+  border: 1px solid rgba(212, 164, 55, 0.3);
+  z-index: 1;
+}
+
+.legend-visual::after {
+  content: '';
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgba(212, 164, 55, 0.15);
+  z-index: 1;
+}
+
+.legend-visual svg {
+  width: 70%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 40px rgba(212, 164, 55, 0.3));
+}
+
+.legend-stamp {
+  position: absolute;
+  bottom: 5%;
+  right: -5%;
+  background: var(--crimson);
+  color: var(--bone);
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  z-index: 3;
+  transform: rotate(8deg);
+  border: 2px solid var(--gold);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.legend-stamp .han-mini {
+  font-family: var(--han);
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--bone);
+}
+
+.legend-stamp .txt {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 0.3rem;
+  color: var(--gold-bright);
+}
+
+/* ============ STATS ============ */
+.stats {
+  background: var(--void-deep);
+  padding: 5rem 3rem;
+  border-top: 1px solid rgba(212, 164, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 164, 55, 0.15);
+}
+
+.stats-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(212, 164, 55, 0.15);
+}
+
+.stat {
+  background: var(--void-deep);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.stat-num {
+  font-family: var(--display);
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+  text-shadow: 0 0 20px rgba(212, 164, 55, 0.2);
+}
+
+.stat-label {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(245, 234, 212, 0.5);
+}
+
+/* ============ MENU ============ */
+.menu {
+  padding: 10rem 3rem;
+  background: var(--void);
+  position: relative;
+}
+
+.menu::before {
+  content: '麵';
+  position: absolute;
+  top: 10%;
+  left: -5rem;
+  font-family: var(--han);
+  font-size: 35rem;
+  color: var(--crimson);
+  opacity: 0.04;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.menu-header {
+  max-width: 800px;
+  margin: 0 auto 6rem;
+  text-align: center;
+}
+
+.menu-header .section-label {
+  justify-content: center;
+}
+
+.menu-header .section-label::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.menu-list {
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 2.5rem;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid rgba(212, 164, 55, 0.1);
+  align-items: start;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(212, 164, 55, 0.05), transparent);
+  transition: width 0.5s;
+}
+
+.menu-item:hover::before { width: 100%; }
+.menu-item:hover { padding-left: 2rem; }
+
+.menu-num {
+  font-family: var(--han);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-info { position: relative; z-index: 1; }
+
+.menu-info h3 {
+  font-family: var(--display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--bone);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.menu-info .han-sub {
+  font-family: var(--han);
+  font-size: 1rem;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.menu-info p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: rgba(245, 234, 212, 0.6);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.menu-info .tags {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(212, 164, 55, 0.3);
+}
+
+.tag.signature {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: var(--bone);
+}
+
+.menu-price {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  color: var(--gold);
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  text-align: right;
+}
+
+.menu-price small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: rgba(245, 234, 212, 0.4);
+  letter-spacing: 0.25em;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* ============ PROCESS ============ */
+.process {
+  padding: 10rem 3rem;
+  background: linear-gradient(180deg, var(--void) 0%, var(--jade) 50%, var(--void) 100%);
+  position: relative;
+  text-align: center;
+}
+
+.process-header {
+  max-width: 700px;
+  margin: 0 auto 6rem;
+}
+
+.process-header .section-label { justify-content: center; }
+.process-header .section-label::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.process-grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.process-card {
+  text-align: left;
+  position: relative;
+  padding: 2.5rem 1.5rem 2rem;
+  border-top: 1px solid var(--gold);
+  transition: transform 0.4s;
+}
+
+.process-card:hover { transform: translateY(-8px); }
+
+.process-num {
+  font-family: var(--han);
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.process-card h3 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  color: var(--bone);
+  text-transform: uppercase;
+}
+
+.process-card p {
+  font-size: 1rem;
+  color: rgba(245, 234, 212, 0.65);
+  line-height: 1.7;
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* ============ CTA ============ */
+.cta {
+  padding: 10rem 3rem;
+  background: var(--void);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '訪';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--han);
+  font-size: 35rem;
+  color: var(--gold);
+  opacity: 0.03;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.cta-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+.cta h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  margin-bottom: 2rem;
+}
+
+.cta-sub {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: rgba(245, 234, 212, 0.7);
+  margin-bottom: 3rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(212, 164, 55, 0.2);
+}
+
+.contact-item h4 {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.contact-item p {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  color: var(--bone);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.contact-item p a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.contact-item p a:hover { border-color: var(--gold); }
+
+/* ============ FOOTER ============ */
+footer {
+  background: var(--void-deep);
+  padding: 4rem 3rem 2rem;
+  border-top: 1px solid rgba(212, 164, 55, 0.15);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-brand {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  color: var(--bone);
+}
+
+.footer-brand .han {
+  font-family: var(--han);
+  color: var(--gold);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.footer-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: rgba(245, 234, 212, 0.4);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  
+  .hero { padding: 6rem 1.5rem 3rem; }
+  .hero-han { font-size: 2rem; }
+  
+  .legend-section, .menu, .process, .cta { padding: 5rem 1.5rem; }
+  
+  .legend-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .legend-visual { max-width: 350px; margin: 0 auto; }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .menu-item {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  
+  .menu-price {
+    grid-column: 2;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-meta { text-align: center; }
+  
+  .legend-track { font-size: 1rem; gap: 2.5rem; }
+  .legend-track span { gap: 2.5rem; }
+  
+  .hero-actions { flex-direction: column; width: 100%; }
+  .btn-primary, .btn-ghost { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <div class="brand-mark"><span>龍</span></div>
+    <div class="brand-text">
+      <span class="name">Arjun</span>
+      <span class="est">EST. PONTIANAK</span>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#legend">Legenda</a></li>
+    <li><a href="#menu">Hidangan</a></li>
+    <li><a href="#process">Ritual</a></li>
+    <li><a href="#contact">Kunjungi</a></li>
+  </ul>
+  <a href="https://wa.me/6281234567890" class="nav-cta">Reservasi</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  
+  <!-- Decorative dragon SVG -->
+  <div class="hero-dragon">
+    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dragGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d4a437" stop-opacity="0.3"/>
+          <stop offset="50%" stop-color="#2d9b7a" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#d4a437" stop-opacity="0.3"/>
+        </linearGradient>
+      </defs>
+      <!-- Coiling dragon path -->
+      <path d="M 100 300 Q 200 150, 350 200 T 600 250 Q 750 280, 850 200 T 1100 250" 
+            stroke="url(#dragGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M 100 320 Q 200 180, 350 220 T 600 270 Q 750 300, 850 220 T 1100 270" 
+            stroke="url(#dragGrad)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <!-- Scales/dots along the path -->
+      <circle cx="200" cy="225" r="3" fill="#d4a437" opacity="0.5"/>
+      <circle cx="350" cy="200" r="4" fill="#d4a437" opacity="0.7"/>
+      <circle cx="500" cy="230" r="3" fill="#d4a437" opacity="0.5"/>
+      <circle cx="650" cy="265" r="4" fill="#d4a437" opacity="0.7"/>
+      <circle cx="800" cy="240" r="3" fill="#d4a437" opacity="0.5"/>
+      <circle cx="950" cy="220" r="4" fill="#d4a437" opacity="0.7"/>
+      <!-- Dragon head suggestion -->
+      <circle cx="1100" cy="250" r="15" fill="none" stroke="#d4a437" stroke-width="2" opacity="0.6"/>
+      <circle cx="1100" cy="250" r="8" fill="#c4342e" opacity="0.7"/>
+      <!-- Flames around -->
+      <path d="M 1115 235 Q 1130 220, 1140 240 Q 1135 245, 1115 235" fill="#c4342e" opacity="0.5"/>
+      <path d="M 1115 265 Q 1130 280, 1140 260 Q 1135 255, 1115 265" fill="#c4342e" opacity="0.5"/>
+    </svg>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-eyebrow">Anno 2026 · Pontianak Heritage</div>
+    <div class="hero-han">龍 之 麵</div>
+    <h1>Kwetiau<br>Arjun<em>resep asli dari sang naga</em></h1>
+    <p class="hero-sub">Sebuah ritual kuliner berusia satu abad. Diolah di atas wok besi tempa, dimasak dengan api naga, disajikan dengan penghormatan pada tradisi Pontianak yang otentik.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary"><span>Telusuri Hidangan</span></a>
+      <a href="#legend" class="btn-ghost">Kisah Sang Naga →</a>
+    </div>
+  </div>
+  
+  <div class="hero-scroll">▼ Scroll</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="legend-bar">
+  <div class="legend-track">
+    <span>Wok Besi Tempa</span>
+    <span>Api Naga 800°C</span>
+    <span>Resep Warisan 1924</span>
+    <span>Pontianak Heritage</span>
+    <span>Halal Certified</span>
+    <span>Wok Besi Tempa</span>
+    <span>Api Naga 800°C</span>
+    <span>Resep Warisan 1924</span>
+    <span>Pontianak Heritage</span>
+    <span>Halal Certified</span>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<section class="legend-section" id="legend">
+  <div class="legend-grid">
+    <div class="legend-text">
+      <div class="section-label">Kisah Sang Naga</div>
+      <h2>Satu abad,<br>satu <em>resep rahasia</em>.</h2>
+      <p><span class="drop">D</span>i sebuah sudut tua kota Pontianak, tahun 1924, seorang juru masak bernama Tan Ah Liong memperkenalkan resep kwetiau yang ia warisi dari kakeknya — seorang koki istana di Fujian yang konon belajar memasak langsung dari Sang Naga Hitam, penjaga sumber api abadi.</p>
+      <p>Cucu buyutnya, Arjun, kini melanjutkan warisan itu. Setiap helai kwetiau ditarik tangan, setiap wok dibakar pada suhu yang tepat, setiap bumbu ditakar dengan ketelitian yang sama persis seperti seabad lalu. Tidak ada jalan pintas. Tidak ada mesin. Hanya api, besi, dan tangan.</p>
+      
+      <div class="legend-quote">"Resep ini bukan milik saya. Saya hanya penjaganya — sampai tiba waktunya menyerahkannya kepada generasi berikutnya."</div>
+      <div class="legend-quote-attr">— Arjun Tan, Generasi Ke-4</div>
+    </div>
+    
+    <div class="legend-visual">
+      <!-- Decorative dragon medallion SVG -->
+      <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="medGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#1a5d47"/>
+            <stop offset="100%" stop-color="#0a0d0a"/>
+          </radialGradient>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#f2c75c"/>
+            <stop offset="100%" stop-color="#8b6914"/>
+          </linearGradient>
+        </defs>
+        
+        <!-- Outer circle -->
+        <circle cx="200" cy="250" r="180" fill="url(#medGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+        <circle cx="200" cy="250" r="170" fill="none" stroke="#d4a437" stroke-width="0.5" opacity="0.4"/>
+        <circle cx="200" cy="250" r="155" fill="none" stroke="#d4a437" stroke-width="0.5" opacity="0.3"/>
+        
+        <!-- Decorative top -->
+        <text x="200" y="120" text-anchor="middle" font-family="Noto Serif TC, serif" font-size="32" fill="#d4a437" font-weight="900">龍麵</text>
+        
+        <!-- Stylized dragon body -->
+        <path d="M 120 250 Q 140 200, 200 210 Q 260 220, 280 260 Q 270 290, 220 280 Q 170 270, 160 240 Q 165 220, 200 225 Q 235 230, 240 255" 
+              fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+        
+        <!-- Dragon head -->
+        <circle cx="280" cy="260" r="18" fill="#c4342e" stroke="#d4a437" stroke-width="2"/>
+        <circle cx="285" cy="258" r="3" fill="#d4a437"/>
+        <!-- Horns -->
+        <path d="M 275 245 L 270 230 L 278 240" fill="none" stroke="#d4a437" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 285 245 L 290 228 L 282 240" fill="none" stroke="#d4a437" stroke-width="2" stroke-linecap="round"/>
+        <!-- Whiskers -->
+        <path d="M 295 263 Q 310 265, 320 258" fill="none" stroke="#d4a437" stroke-width="1.5"/>
+        <path d="M 295 268 Q 310 272, 320 280" fill="none" stroke="#d4a437" stroke-width="1.5"/>
+        
+        <!-- Scales -->
+        <circle cx="155" cy="245" r="2.5" fill="#d4a437" opacity="0.7"/>
+        <circle cx="180" cy="230" r="2.5" fill="#d4a437" opacity="0.7"/>
+        <circle cx="210" cy="225" r="2.5" fill="#d4a437" opacity="0.7"/>
+        <circle cx="240" cy="240" r="2.5" fill="#d4a437" opacity="0.7"/>
+        <circle cx="195" cy="265" r="2.5" fill="#d4a437" opacity="0.5"/>
+        <circle cx="225" cy="270" r="2.5" fill="#d4a437" opacity="0.5"/>
+        
+        <!-- Flames around dragon -->
+        <path d="M 100 270 Q 95 250, 105 240 Q 110 255, 100 270" fill="#c4342e" opacity="0.7"/>
+        <path d="M 90 260 Q 80 245, 88 230 Q 95 245, 90 260" fill="#c4342e" opacity="0.5"/>
+        <path d="M 300 290 Q 310 280, 305 265 Q 315 275, 300 290" fill="#c4342e" opacity="0.6"/>
+        
+        <!-- Bottom text -->
+        <text x="200" y="395" text-anchor="middle" font-family="Cinzel, serif" font-size="14" fill="#d4a437" letter-spacing="4">ARJUN</text>
+        <text x="200" y="415" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#d4a437" letter-spacing="3" opacity="0.6">EST · 1924 · MMXXVI</text>
+        
+        <!-- Decorative corners -->
+        <path d="M 200 75 L 195 85 L 205 85 Z" fill="#d4a437"/>
+        <path d="M 200 425 L 195 415 L 205 415 Z" fill="#d4a437"/>
+      </svg>
+      
+      <div class="legend-stamp">
+        <div>
+          <div class="han-mini">真</div>
+          <div class="txt">100% Otentik</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-num">102</div>
+      <div class="stat-label">Tahun Tradisi</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">800°</div>
+      <div class="stat-label">Suhu Wok</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Generasi</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Dedikasi</div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="menu-header">
+    <div class="section-label" style="justify-content:center;">— Hidangan Pilihan —</div>
+    <h2>Mahakarya<br>dari <em>wok api</em>.</h2>
+  </div>
+  
+  <div class="menu-list">
+    <div class="menu-item">
+      <div class="menu-num">壹</div>
+      <div class="menu-info">
+        <h3>Kwetiau Sapi Arjun</h3>
+        <div class="han-sub">牛 河 粉 · Signature</div>
+        <p>Kwetiau hitam wok hei, irisan daging sapi prima, sawi hijau, tauge segar, telur tarikan. Hidangan andalan sejak 1924.</p>
+        <div class="tags">
+          <span class="tag signature">★ Signature</span>
+          <span class="tag">Halal</span>
+          <span class="tag">Wok Hei</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 52K<small>per porsi</small></div>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-num">貳</div>
+      <div class="menu-info">
+        <h3>Kwetiau Goreng Seafood</h3>
+        <div class="han-sub">海 鮮 炒 河</div>
+        <p>Udang besar, cumi, bakso ikan, dan irisan ikan tenggiri. Diolah dengan teknik api besar khas Kanton.</p>
+        <div class="tags">
+          <span class="tag">Halal</span>
+          <span class="tag">Wok Hei</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 62K<small>per porsi</small></div>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-num">參</div>
+      <div class="menu-info">
+        <h3>Kwetiau Siram Sapi</h3>
+        <div class="han-sub">滑 蛋 牛 河</div>
+        <p>Kwetiau disiram saus telur lembut dengan irisan daging sapi tender. Versi modern dari resep klasik.</p>
+        <div class="tags">
+          <span class="tag">Halal</span>
+          <span class="tag">Saus Telur</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 55K<small>per porsi</small></div>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-num">肆</div>
+      <div class="menu-info">
+        <h3>Kwetiau Kuah Arjun</h3>
+        <div class="han-sub">湯 河 粉</div>
+        <p>Kwetiau dalam kaldu sapi yang disimmer 10 jam dengan rempah rahasia. Hangat dan menenangkan jiwa.</p>
+        <div class="tags">
+          <span class="tag">Halal</span>
+          <span class="tag">Kaldu 10 Jam</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 48K<small>per porsi</small></div>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-num">伍</div>
+      <div class="menu-info">
+        <h3>Kwetiau Ayam Jamur</h3>
+        <div class="han-sub">雞 菇 河 粉</div>
+        <p>Ayam kampung pilihan, jamur shitake, jamur kuping, dan sayuran segar. Versi ramah keluarga.</p>
+        <div class="tags">
+          <span class="tag">Halal</span>
+          <span class="tag">Family Friendly</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 45K<small>per porsi</small></div>
+    </div>
+    
+    <div class="menu-item">
+      <div class="menu-num">陸</div>
+      <div class="menu-info">
+        <h3>Kwetiau Naga Pedas</h3>
+        <div class="han-sub">龍 火 河 · Limited</div>
+        <p>Versi spesial dengan saus cabai naga rahasia — pedas membakar, tapi rasanya bikin nagih. Untuk yang berani.</p>
+        <div class="tags">
+          <span class="tag signature">🔥 Pedas Level 5</span>
+          <span class="tag">Limited Edition</span>
+        </div>
+      </div>
+      <div class="menu-price">Rp 58K<small>per porsi</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="process-header">
+    <div class="section-label" style="justify-content:center;">— Ritual Empat Tahap —</div>
+    <h2>Cara <em>sang naga</em> memasak.</h2>
+  </div>
+  
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-num">壹 · I</div>
+      <h3>Pilih Bahan</h3>
+      <p>Sapi pilihan dari peternakan lokal, sayuran segar dipetik pagi hari, kwetiau dibuat fresh setiap subuh oleh tukang mie generasi ketiga.</p>
+    </div>
+    
+    <div class="process-card">
+      <div class="process-num">貳 · II</div>
+      <h3>Panaskan Wok</h3>
+      <p>Wok besi tempa dipanaskan hingga 800°C — temperatur "api naga" yang menciptakan aroma khas <em>wok hei</em> yang tidak bisa ditiru kompor biasa.</p>
+    </div>
+    
+    <div class="process-card">
+      <div class="process-num">參 · III</div>
+      <h3>Tarian Wok</h3>
+      <p>Bahan dimasak kurang dari 90 detik dengan gerakan melempar khas. Setiap tarikan wok harus tepat — tidak boleh terlalu lama atau terlalu cepat.</p>
+    </div>
+    
+    <div class="process-card">
+      <div class="process-num">肆 · IV</div>
+      <h3>Sajikan Segera</h3>
+      <p>Tidak ada hidangan menunggu lebih dari 60 detik di counter. Disajikan langsung dari wok ke piring — panas, segar, sempurna.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <div class="cta-content">
+    <div class="section-label" style="justify-content:center;">— Kunjungi Kami —</div>
+    <h2>Datang dan <em>rasakan</em> sendiri.</h2>
+    <p class="cta-sub">Tidak ada yang bisa menggantikan pengalaman duduk di meja kayu tua, menghirup aroma wok hei yang baru saja dinyalakan.</p>
+    <a href="https://wa.me/6285212345678" class="btn-primary"><span>Reservasi via WhatsApp</span></a>
+    
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h4>Lokasi</h4>
+        <p>Jl. Gajah Mada No. 88<br>Pontianak, Kalbar 78121</p>
+      </div>
+      <div class="contact-item">
+        <h4>Jam Buka</h4>
+        <p>Selasa – Minggu<br>11:00 – 22:00 WIB</p>
+      </div>
+      <div class="contact-item">
+        <h4>Kontak</h4>
+        <p>
+          <a href="tel:+6285212345678">+62 852-1234-5678</a><br>
+          <a href="mailto:halo@arjun-kwetiau.id">halo@arjun-kwetiau.id</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="han">龍</span> Arjun · Kwetiau Pontianak
+    </div>
+    <div class="footer-meta">
+      © MMXXVI · Anno 2026 · All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
